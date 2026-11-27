@@ -979,3 +979,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     padding-right: 20px !important;
   }
 }
+/* Alt kısımdaki Made with Solo ibaresini gizle */
+#Footer a[href*="soloist.ai"] {
+  display: none !important;
+}
