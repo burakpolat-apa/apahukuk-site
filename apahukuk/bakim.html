@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Atalay &amp; Polat &amp; Akkaya | APA Hukuk ve Danışmanlık</title>
+  <link rel="icon" href="https://cdn.soloist.ai/7268bd6a-0b0f-4616-a840-e6975bcd6aa8/logo/f94b8696-83f6-4acf-a650-f1d45cda03f6.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Roboto+Serif:opsz,wght@8..144,400;8..144,500;8..144,600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-deep: #003821;
+      --bg-darker: #002415;
+      --gold: #c5a059;
+      --gold-soft: rgba(197, 160, 89, 0.28);
+      --ivory: #f7f5f0;
+      --ivory-muted: rgba(247, 245, 240, 0.72);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      min-height: 100%;
+      background-color: var(--bg-deep);
+      background-image: radial-gradient(circle at 50% 35%, #00472a 0%, var(--bg-deep) 52%, var(--bg-darker) 100%);
+      color: var(--ivory);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 28px;
+    }
+
+    .frame {
+      width: 100%;
+      max-width: 780px;
+      border: 1px solid var(--gold-soft);
+      padding: 64px 56px 48px;
+      text-align: center;
+      position: relative;
+      background: rgba(0, 36, 21, 0.28);
+      backdrop-filter: blur(6px);
+    }
+
+    .logo {
+      display: inline-block;
+      margin-bottom: 40px;
+      opacity: 0;
+      animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
+    }
+
+    .logo img {
+      max-height: 68px;
+      max-width: 100%;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.25s forwards;
+    }
+
+    h1 {
+      font-family: 'Roboto Serif', Georgia, serif;
+      font-size: clamp(28px, 4.2vw, 42px);
+      font-weight: 500;
+      line-height: 1.25;
+      color: var(--ivory);
+      margin-bottom: 24px;
+      opacity: 0;
+      animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.38s forwards;
+    }
+
+    .divider {
+      width: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0 auto 28px;
+      animation: expandLine 1s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
+    }
+
+    .message {
+      font-size: 15.5px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--ivory-muted);
+      max-width: 560px;
+      margin: 0 auto 44px;
+      opacity: 0;
+      animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.55s forwards;
+    }
+
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 14px 28px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(247, 245, 240, 0.12);
+      opacity: 0;
+      animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.7s forwards;
+    }
+
+    .contact-link {
+      color: var(--ivory);
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 2px;
+      border-bottom: 1px solid transparent;
+      transition: color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .contact-link:hover {
+      color: var(--gold);
+      border-bottom-color: var(--gold);
+    }
+
+    .contact-link svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      color: var(--gold);
+    }
+
+    .footer-note {
+      margin-top: 40px;
+      font-size: 12px;
+      font-weight: 300;
+      color: rgba(247, 245, 240, 0.45);
+      letter-spacing: 0.02em;
+      opacity: 0;
+      animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.85s forwards;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes expandLine {
+      from { width: 0; }
+      to { width: 96px; }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 16px;
+      }
+      .frame {
+        padding: 44px 24px 36px;
+      }
+      .logo {
+        margin-bottom: 28px;
+      }
+      .logo img {
+        max-height: 54px;
+      }
+      .message {
+        font-size: 14.5px;
+        margin-bottom: 32px;
+      }
+      .contact-bar {
+        flex-direction: column;
+        gap: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="frame">
+    <div class="logo">
+      <img src="https://cdn.soloist.ai/7268bd6a-0b0f-4616-a840-e6975bcd6aa8/logo/d47c8dcd-4cb4-41e0-bc2f-20cb9910b8f1.png" alt="APA Hukuk ve Danışmanlık" />
+    </div>
+
+    <p class="eyebrow">Yenileniyoruz</p>
+    <h1>Web Sitemiz Kısa Süreliğine Bakımdadır</h1>
+    <div class="divider"></div>
+
+    <p class="message">
+      Atalay &amp; Polat &amp; Akkaya | APA Hukuk ve Danışmanlık olarak, sizlere daha etkin ve kapsamlı bir dijital deneyim sunabilmek amacıyla web sitemizi yeniliyoruz. En kısa sürede yeni yüzümüzle yayında olacağız.
+    </p>
+
+    <div class="contact-bar">
+      <!-- Aşağıdaki e-posta ve telefon bilgilerini kendi bilgilerinizle güncelleyin -->
+      <a class="contact-link" href="mailto:info@apa.av.tr">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+        </svg>
+        info@apa.av.tr
+      </a>
+
+      <a class="contact-link" href="https://tr.linkedin.com/company/atalay-polat-akkaya-apa-hukuk-ve-dan%C4%B1%C5%9Fmanl%C4%B1k" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 20 20" fill="currentColor">
+          <path d="M16.666 1.66669H3.33268C2.41602 1.66669 1.66602 2.41669 1.66602 3.33335V16.6667C1.66602 17.5834 2.41602 18.3334 3.33268 18.3334H16.666C17.5827 18.3334 18.3327 17.5834 18.3327 16.6667V3.33335C18.3327 2.41669 17.5827 1.66669 16.666 1.66669ZM6.66602 15.8334H4.16602V8.33335H6.66602V15.8334ZM5.41602 6.91669C4.58268 6.91669 3.91602 6.25002 3.91602 5.41669C3.91602 4.58335 4.58268 3.91669 5.41602 3.91669C6.24935 3.91669 6.91602 4.58335 6.91602 5.41669C6.91602 6.25002 6.24935 6.91669 5.41602 6.91669ZM15.8327 15.8334H13.3327V11.4167C13.3327 10.7501 12.7493 10.1667 12.0827 10.1667C11.416 10.1667 10.8327 10.7501 10.8327 11.4167V15.8334H8.33268V8.33335H10.8327V9.33335C11.2493 8.66669 12.166 8.16669 12.916 8.16669C14.4994 8.16669 15.8327 9.50002 15.8327 11.0834V15.8334Z"></path>
+        </svg>
+        LinkedIn
+      </a>
+    </div>
+
+    <p class="footer-note">
+      &copy; 2026 Atalay &amp; Polat &amp; Akkaya | APA Hukuk ve Danışmanlık. Tüm hakları saklıdır.
+    </p>
+  </main>
+</body>
+</html>
