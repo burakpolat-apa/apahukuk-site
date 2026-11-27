@@ -964,3 +964,18 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     border-right: none !important;
   }
 }
+/* Sayfa içeriklerinin sağa ve sola yaslanmasını önleyen boşluk ve genişlik ayarı */
+.fom2f23 .container {
+  max-width: 1180px !important;
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (max-width: 767.99px) {
+  .fom2f23 .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
